@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./src/styles.css" />
 
     <title>Lelouch - Chat</title>
 </head>
@@ -14,25 +14,21 @@
 
     <header>
 
-        <div>
-            Lelouch
-        </div>
-
-        <nav>
-            <a href="/">Home</a>
-            <a href="/chat">Chat</a>
-            <a href="/about">About</a>
+        <nav class="mainNav">
+            <a class="mainNav__link" href="/">Home</a>
+            <a class="mainNav__link" href="/chat">Chat</a>
+            <a class="mainNav__link" href="/about">About</a>
         </nav>
 
     </header>
 
 
-    <main id="app">
+    <div id="app">
         <!--
             El router renderizará aquí
             la vista correspondiente.
         -->
-    </main>
+    </div>
 
 
     <script type="module" src="./src/app.js"></script>
