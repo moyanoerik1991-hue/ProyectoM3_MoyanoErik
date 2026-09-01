@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="./styles.css">
 
-    <title>Mi Chat</title>
+    <title>Lelouch - Chat</title>
 </head>
 
 <body>
@@ -15,60 +15,27 @@
     <header>
 
         <div>
-            Welcome to My Website
+            Lelouch
         </div>
 
         <nav>
-            <button id="btn-home">Home</button>
-            <button id="btn-chat">Chat</button>
-            <button id="btn-about">About</button>
+            <a href="/">Home</a>
+            <a href="/chat">Chat</a>
+            <a href="/about">About</a>
         </nav>
 
     </header>
 
-    <main>
 
-        <section id="home">
-
-            <h1>Home</h1>
-
-            <p>
-                This is the home section of the website.
-            </p>
-
-        </section>
-
-
-        <section id="chat">
-
-            <h1>Chat</h1>
-
-            <p>
-                This is the chat section of the website.
-            </p>
-
-            <div class="message-character">
-                <p>
-                    Hola, ¿qué necesitas?
-                </p>
-            </div>
-
-        </section>
-
-
-        <section id="about">
-
-            <h1>About</h1>
-
-            <p>
-                This is the about section of the website.
-            </p>
-
-        </section>
-
+    <main id="app">
+        <!--
+            El router renderizará aquí
+            la vista correspondiente.
+        -->
     </main>
 
-    <script src="src/app.js"></script>
+
+    <script type="module" src="./src/app.js"></script>
 
 </body>
 
