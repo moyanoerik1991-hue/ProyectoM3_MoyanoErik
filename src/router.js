@@ -5,7 +5,6 @@ import { renderNotFound } from "./views/notFound.js";
 
 const routes = {
   "/": renderHome,
-  "/home": renderHome,
   "/chat": renderChat,
   "/about": renderAbout,
 };
