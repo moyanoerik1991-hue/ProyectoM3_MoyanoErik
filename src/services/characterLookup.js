@@ -6,12 +6,13 @@ export function getCharacterById(characterId) {
 }
 
 export function toCharacterProfile(rawCharacter) {
-    const { id, name, image, presentation } = rawCharacter;
+    const { id, name, image, presentation, description } = rawCharacter;
 
     return {
         id,
         name: name ?? "Desconocido",
         image: image ?? "",
         presentation: presentation ?? "",
+        description: description ?? "",
     };
 }
