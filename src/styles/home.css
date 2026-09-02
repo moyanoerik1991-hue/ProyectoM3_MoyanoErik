@@ -1,0 +1,111 @@
+/* ============================
+   Mobile first (base: <768px)
+   ============================ */
+
+.home {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* mobile: scroll vertical, header/footer quedan fijos */
+}
+
+.home__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.home__grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(220px, auto); /* cards con tamaño natural, permite scroll */
+  gap: 1rem;
+}
+
+.characterCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease;
+}
+
+.characterCard:hover {
+  transform: translateY(-2px);
+}
+
+.characterCard__image {
+  flex: 1 1 67%;
+  min-height: 0;
+  width: 100%;
+  object-fit: contain;
+  background-color: #111;
+}
+
+.characterCard__body {
+  flex: 0 0 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+  gap: 0.25rem;
+  overflow: hidden;
+}
+
+.characterCard__name {
+  font-size: 1.6rem;
+}
+
+.characterCard__detail {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  display: -webkit-box; /* compatibilidad */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+/* ============================
+   Tablet (>= 768px) → 2x2, sin scroll, se ajusta al espacio
+   ============================ */
+@media (min-width: 768px) {
+  .home {
+    padding: 2rem;
+    overflow: hidden; /* se ajusta al espacio disponible */
+  }
+
+  .home__title {
+    font-size: 2rem;
+  }
+
+  .home__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr; /* ocupa todo el alto disponible */
+  }
+}
+
+/* ============================
+   Desktop (>= 1024px) → 3 en fila, sin scroll
+   ============================ */
+@media (min-width: 1024px) {
+  .home {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .home__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+  }
+}
