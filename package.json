@@ -1,0 +1,27 @@
+{
+  "name": "proyectom3_moyanoerik",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moyanoerik1991-hue/ProyectoM3_MoyanoErik.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/moyanoerik1991-hue/ProyectoM3_MoyanoErik/issues"
+  },
+  "homepage": "https://github.com/moyanoerik1991-hue/ProyectoM3_MoyanoErik#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1"
+  }
+}
