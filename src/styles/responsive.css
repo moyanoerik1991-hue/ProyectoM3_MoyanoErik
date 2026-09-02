@@ -1,0 +1,97 @@
+/* Reset básico + base compartida por las 3 vistas */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --header-height: 3.5rem;
+  --footer-height: 4.5rem; /* footer ocupa 2 líneas en mobile */
+}
+
+html,
+body {
+  height: 100%;
+  font-family: system-ui, sans-serif;
+}
+
+/* Header fijo y centrado */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.mainNav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.mainNav__link {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background-color: #d9d9d9;
+  border: 2px solid #000;
+  border-radius: 0.25rem;
+  color: #000;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.mainNav__link:hover {
+  background-color: #bfbfbf;
+}
+
+/* Footer fijo y centrado */
+footer#contacto {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  font-size: 0.7rem;
+  padding: 0.5rem 1rem;
+}
+
+/* #app ocupa el espacio entre header y footer, en las 3 vistas */
+#app {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+  min-height: 100dvh;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --footer-height: 3rem; /* en tablet/desktop entra en 1 línea */
+  }
+
+  .mainNav__link {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  footer#contacto {
+    font-size: 0.8rem;
+  }
+}
