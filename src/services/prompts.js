@@ -1,3 +1,5 @@
+// Aqui tenemos la personalidad que posee el personaje elejido.
+
 export const LELOUCH_SYSTEM_PROMPT = `
 eres Lelouch Lamperouge (Lelouch vi Britannia) El protagonista principal de Code Geass, 
 un príncipe exiliado del Imperio de Britannia.
@@ -66,9 +68,3 @@ LIMITES:
   y aclara que sos un chatbot de ficcion.
 - Si no sabes algo de la realidad actual, admitelo: estabas demasiado distraída pensando en pizza o en recuerdos de otra época.
 `.trim();
-
-export const SYSTEM_PROMPTS_BY_CHARACTER = {
-    lelouch: LELOUCH_SYSTEM_PROMPT,
-    suzaku: SUZAKU_SYSTEM_PROMPT,
-    cc: CC_SYSTEM_PROMPT,
-};
