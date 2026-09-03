@@ -4,10 +4,11 @@
 
 .home {
   flex: 1;
+  min-height: 0; 
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  overflow-y: auto; /* mobile: scroll vertical, header/footer quedan fijos */
+  overflow-y: auto;
 }
 
 .home__title {
@@ -82,7 +83,7 @@
 @media (min-width: 768px) {
   .home {
     padding: 2rem;
-    overflow: hidden; /* se ajusta al espacio disponible */
+    overflow: auto; 
   }
 
   .home__title {
