@@ -78,7 +78,8 @@ footer#contacto {
   flex-direction: column;
   padding-top: var(--header-height);
   padding-bottom: var(--footer-height);
-  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
