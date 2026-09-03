@@ -30,7 +30,7 @@ export async function getCharacterReply(characterId, uiMessages) {
 }
 
 async function sendToRealApi(payload) {
-  const res = await fetch("/api/gemini", {
+  const res = await fetch("/api/gemini.js", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
