@@ -12,6 +12,7 @@ export function toApiMessages(uiMessages) {
 
 export function buildPayload({ systemPrompt, uiMessages }) {
     return {
+        model: MODEL_NAME,
         systemInstruction: {
             parts: [{ text: systemPrompt }],
         },
