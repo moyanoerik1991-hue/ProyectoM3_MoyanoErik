@@ -1,8 +1,16 @@
 {
- "rewrites": [
- {
-    "source": "/(.*)",
-    "destination": "/index.html"
- }
- ]
+  "functions": {
+    "api/gemini.js": {
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
 }
